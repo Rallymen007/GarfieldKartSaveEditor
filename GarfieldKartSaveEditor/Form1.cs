@@ -58,18 +58,21 @@ namespace GarfieldKartSaveEditor {
                 toolStripStatusLabel2.Text = "Load First";
                 return;
             }
-            switch (comboBox1.SelectedItem) {
+            listSelected = comboBox1.SelectedItem.ToString();
+            RefreshList();
+        }
+
+        private void RefreshList() {
+            switch (listSelected) {
                 case "Options":
                     listBox1.DataSource = new BindingSource(save.Options, null);
                     listBox1.DisplayMember = "Key";
                     toolStripStatusLabel2.Text = "Options Selected";
-                    listSelected = "Options";
                     break;
                 case "Progression":
                     listBox1.DataSource = new BindingSource(save.Progression, null);
                     listBox1.DisplayMember = "Key";
                     toolStripStatusLabel2.Text = "Progression Selected";
-                    listSelected = "Progression";
                     break;
                 default:
                     toolStripStatusLabel2.Text = "Nothing Selected";
@@ -98,6 +101,7 @@ namespace GarfieldKartSaveEditor {
                 default:
                     break;
             }
+            RefreshList();
         }
 
         private void button2_Click(object sender, EventArgs e) {
@@ -113,6 +117,19 @@ namespace GarfieldKartSaveEditor {
                 MessageBox.Show("ERROR saving\n" + ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 toolStripStatusLabel4.Text = "Error";
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e) {
+            List<string> keys = new List<string>();
+            foreach(var pair in save.Progression) {
+                if (pair.Key.StartsWith("tm_")) {
+                    keys.Add(pair.Key);
+                }
+            }
+            foreach(var key in keys) {
+                save.Progression[key] = "4";
+            }
+            RefreshList();
         }
     }
 }
