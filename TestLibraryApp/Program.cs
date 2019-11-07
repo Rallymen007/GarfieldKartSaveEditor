@@ -20,7 +20,7 @@ namespace TestLibraryApp {
 
         static string GetPath() {
             Guid localLowId = new Guid("A520A1A4-1780-4FF6-BD18-167343C5AF16");
-            return GetKnownFolderPath(localLowId) + "\\\\Anuman Interactive\\\\Garfield Kart";
+            return GetKnownFolderPath(localLowId) + "\\\\Anuman Interactive\\\\Garfield Kart Furious Racing";
         }
 
         static string GetKnownFolderPath(Guid knownFolderId) {

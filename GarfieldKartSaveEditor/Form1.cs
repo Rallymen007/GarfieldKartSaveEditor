@@ -22,6 +22,11 @@ namespace GarfieldKartSaveEditor {
             return GetKnownFolderPath(localLowId) + "\\Anuman Interactive\\Garfield Kart";
         }
 
+        static string GetPathFuriousRacing() {
+            Guid localLowId = new Guid("A520A1A4-1780-4FF6-BD18-167343C5AF16");
+            return GetKnownFolderPath(localLowId) + "\\Anuman Interactive\\Garfield Kart Furious Racing";
+        }
+
         static string GetKnownFolderPath(Guid knownFolderId) {
             IntPtr pszPath = IntPtr.Zero;
             try {
@@ -130,6 +135,10 @@ namespace GarfieldKartSaveEditor {
                 save.Progression[key] = "4";
             }
             RefreshList();
+        }
+
+        private void button5_Click(object sender, EventArgs e) {
+            locationPath.Text = GetPathFuriousRacing();
         }
     }
 }

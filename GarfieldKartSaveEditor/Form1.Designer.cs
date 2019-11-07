@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.locationPath = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -39,6 +40,7 @@
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +48,7 @@
             // 
             this.locationPath.Location = new System.Drawing.Point(91, 10);
             this.locationPath.Name = "locationPath";
-            this.locationPath.Size = new System.Drawing.Size(392, 20);
+            this.locationPath.Size = new System.Drawing.Size(433, 20);
             this.locationPath.TabIndex = 0;
             // 
             // label1
@@ -60,7 +62,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(489, 8);
+            this.button1.Location = new System.Drawing.Point(497, 39);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -76,7 +78,7 @@
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(16, 68);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(547, 303);
+            this.listBox1.Size = new System.Drawing.Size(637, 303);
             this.listBox1.TabIndex = 3;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -103,7 +105,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(489, 39);
+            this.button2.Location = new System.Drawing.Point(578, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 6;
@@ -150,7 +152,7 @@
             this.toolStripStatusLabel4});
             this.statusStrip1.Location = new System.Drawing.Point(0, 403);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(575, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(665, 22);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -180,7 +182,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(575, 10);
+            this.button4.Location = new System.Drawing.Point(674, 11);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 11;
@@ -188,11 +190,22 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(530, 10);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(123, 23);
+            this.button5.TabIndex = 12;
+            this.button5.Text = "Furious Racing default";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 425);
+            this.ClientSize = new System.Drawing.Size(665, 425);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.button3);
@@ -205,6 +218,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.locationPath);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Garfield Kart Save Editor";
             this.statusStrip1.ResumeLayout(false);
@@ -232,6 +246,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
